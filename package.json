@@ -1,0 +1,15 @@
+{
+  "name": "conserveitscheduler",
+  "version": "1.0.0",
+  "description": "The simplest template for a Neutralinojs app. It's possible to use your favorite frontend framework using the following steps.",
+  "main": "",
+  "scripts": {
+    "test": "start",
+    "start": "server.js"
+  },
+  "author": "Novarra Digital",
+  "license": "ISC",
+  "dependencies": {
+   
+  }
+}
