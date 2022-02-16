@@ -44,9 +44,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Insightly Scheduler Screenshot][product-screenshot]](https://github.com/pythonDON0161/insightlyScheduler/screenshot.png)
-
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
