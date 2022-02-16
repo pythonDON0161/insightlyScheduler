@@ -34,8 +34,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>\
   </ol>
@@ -46,9 +44,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Insightly Scheduler Screenshot][product-screenshot]](https://example.com)
+[![Insightly Scheduler Screenshot][product-screenshot]](https://github.com/pythonDON0161/insightlyScheduler/screenshot.png)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `pythonDON0161`, `insightlyScheduler`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
