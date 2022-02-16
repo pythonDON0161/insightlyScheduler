@@ -26,7 +26,7 @@
   },
   "modes": {
     "window": {
-      "title": "conserveitScheduler",
+      "title": "insightlyScheduler",
       "width": 900,
       "height": 600,
       "minWidth": 600,
@@ -57,7 +57,7 @@
     }
   },
   "cli": {
-    "binaryName": "conserveitScheduler",
+    "binaryName": "insightlyScheduler",
     "resourcesPath": "/resources/",
     "extensionsPath": "/extensions/",
     "clientLibrary": "/resources/js/neutralino.js",

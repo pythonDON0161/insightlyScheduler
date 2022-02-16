@@ -1,18 +1,19 @@
+const API_KEY = 'ENTER YOUR API';  //Get your api key from Insightly user settings and convert to base64
+const proxyURL = 'ENTER YOUR PROXY URL HERE' //I used heroku you may use whichever you wish
 
 function testTasks() {
     var today = new Date().toISOString();
     var date = document.getElementById("date").value; // Get Today's Date
     console.log(date);
+    // Using heroku server as proxy because cant make calls to api from localhost
     var url = ' https://radiant-brushlands-07939.herokuapp.com/http://api.na1.insightly.com/v3.1/Tasks/Search?field_name=DUE_DATE&field_value='+today;
 
     var tasksDUE;
-
-    // USE HEROKU SERVER AS PROXY
-
+    // Send axios request with insightly api key converted to base64
     axios.get(url, {
 
         headers: {
-            'Authorization': 'Basic OTIwMzlmNzAtMjcwNS00MDczLTk5NzYtNDY4MWNjMWNjZjdkOg==',
+            'Authorization': 'Basic {base 64 API Key goes here}',
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': '*',
         },
@@ -93,8 +94,8 @@ function testTasks() {
 
                     if (index === tasksDUE.length - 1) { //check if loop is at last obejct in array
                         console.log(_taskArray)
-                        makePdf(_taskArray)
-                        // extTask(_taskArray)
+                        makePdf(_taskArray) // Create pdf from task arraay
+                      
 
                     }
                 })
@@ -126,7 +127,7 @@ function specTasks() {
     axios.get(url, {
 
         headers: {
-            'Authorization': 'Basic OTIwMzlmNzAtMjcwNS00MDczLTk5NzYtNDY4MWNjMWNjZjdkOg==',
+            'Authorization': 'Basic { base 64 API Key goes here}',
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': '*',
         },
@@ -231,7 +232,7 @@ async function getContact(_contactID) {
     const _response = await axios.get(_url, {
 
         headers: {
-            'Authorization': 'Basic OTIwMzlmNzAtMjcwNS00MDczLTk5NzYtNDY4MWNjMWNjZjdkOg==',
+            'Authorization': 'Basic { base 64 API Key goes here}',
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': '*'
         }
@@ -274,7 +275,7 @@ async function getOrganisation(_contactID) {
     const _response = await axios.get(_url, {
 
         headers: {
-            'Authorization': 'Basic OTIwMzlmNzAtMjcwNS00MDczLTk5NzYtNDY4MWNjMWNjZjdkOg==',
+            'Authorization': 'Basic { base 64 API Key goes here}',
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': '*'
         }
@@ -327,7 +328,7 @@ async function getProject(_contactID) {
     const _response = await axios.get(_url, {
 
         headers: {
-            'Authorization': 'Basic OTIwMzlmNzAtMjcwNS00MDczLTk5NzYtNDY4MWNjMWNjZjdkOg==',
+            'Authorization': 'Basic { base 64 API Key goes here}',
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': '*'
         }
@@ -356,13 +357,5 @@ async function getProject(_contactID) {
 }
 
 
-async function extTask(_taskArray){
 
-    newWindow = window.open("", "newWindow", "width=800, height=600");
-    var content = "<html><h2>Edit the tasks from Insightly then generate the PDF</h2> "
-        content += "<script>"+"var tarray="+_taskArray+"forEach( async function(){} )";
-        content += "</script>";
-        content += "</html>";
-    newWindow.document.write(content);
 
-}
